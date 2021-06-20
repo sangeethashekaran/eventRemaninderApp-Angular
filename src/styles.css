@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.bg-color{
+    /* background-color:#f792ed; */
+    /* background-color: #e09da9; */
+    background-color: #edb9c3;
+    /* background-color: #b691ba; */
+
+    background-size: cover;
+    height:700px;
+}

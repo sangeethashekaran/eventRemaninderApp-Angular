@@ -1,0 +1,64 @@
+<div class="row display justify-content-center">
+  <div class="col-md-4"> </div>
+<div class="col-md-4 text-center">
+ <h3>Event History</h3>
+ <div class="table-responsive" >
+  <table class="table table-bordered">
+      <thead class="table-dark">
+          <tr>
+
+              <th>Sl.No</th>
+              <th>Date</th>
+              <th>Event</th>
+             
+          </tr>
+      </thead>
+      <tbody  >
+          <tr *ngFor="let result of results;let i=index;">
+            <td>{{i+1}}</td>
+            <td>{{result.eDate}}</td> 
+              <td>{{result.eName}}</td>
+             
+          </tr>
+      
+          </tbody>
+          </table>
+          </div>
+</div>
+<div class="col-md-4"> </div>
+</div>
+<!-- <form>
+  <div class="container">
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col">
+          <h1>Your Events</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Event date</th>
+                <th>Event Name</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let result of results;let i=index;">
+                 <td>{{i+1}}</td>
+                <td>{{result.eDate}}</td>
+                <td>{{result.eName}}</td>
+
+              </tr>
+            </tbody>
+
+
+          </table>
+
+
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</form> -->

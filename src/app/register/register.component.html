@@ -1,0 +1,20 @@
+
+
+    <div class="row">
+        <div class="col-lg-6 col-md-5 col-10">
+            <h2>Event Remainder</h2>
+            <h3>Make Life Easier</h3>
+        </div>
+        <div class="col-lg-6 col-md-6 col-5">
+        <div class="container">
+            <h1>Register</h1>
+            <form [formGroup]="registerForm" (ngSubmit)="register()">
+            <input type="text" class="form-control" formControlName="uname" placeholder="Username"><br>
+            <input type="number" class="form-control" formControlName="id" placeholder="User ID"><br>
+            <input type="password" class="form-control" formControlName="pswd" placeholder="Password"><br>
+            <button class="button btn-success" type="submit">Register</button>
+            </form>
+            <a routerLink="">Login</a>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,38 @@
+.container{
+margin-top: 100px;
+border: 1px solid lightskyblue;
+border-radius: 20px;
+width: 400px;
+height: 370px;
+background-color:floralwhite;
+}
+.form-control{
+    position:relative;
+    top:60px;
+    width:350px;
+    background:thistle;
+}
+
+h5{
+    text-align: center;
+    margin-top:20px;
+    font-family:monospace;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.btn-success{
+    position:relative;
+    top:70px;
+    left: 10px;
+    width: 150px;
+    height:40px;
+}
+
+.btn-secondary{
+    position:relative;
+    top:70px;
+    width: 150px;
+    left: 30px;
+    height:40px;
+}
