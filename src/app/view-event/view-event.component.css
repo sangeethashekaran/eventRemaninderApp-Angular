@@ -1,3 +1,21 @@
 .table-responsive{
     margin-top: 50px;
 }
+
+.btn-secondary{
+    width:130px;
+    position:relative;
+    /* left: 110px; */
+    top: 30px;
+}
+h3{
+    position:relative;
+    top:25px;
+}
+.btn-primary{
+    width:130px;
+    position: relative;
+    top:30px;
+    left: 170px;
+}
+

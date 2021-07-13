@@ -19,19 +19,29 @@ export class AddeventComponent implements OnInit {
 
   //save events 
   addEvent(){
-    let uID=this.uID;
+    let uid=this.uID;
     let eDate=this.eDate;
     let eName=this.eName;
     // console.log(uID,eDate,eName);
-    const result=this.data.addEvent(uID,eDate,eName);
-    if(result){
-      alert("Your Event added successfully");
+    this.data.addEvent(uid,eDate,eName)
+    .subscribe((result:any)=>{
+      if(result){
+        alert(result.message)
+      }
+    },
+    (result)=>{
+      alert(result.error.message)
     }
-    else{
-      alert("failed to add Event")
-    }
-  
+    )
   }
+    // if(result){
+    //   alert("Your Event added successfully");
+    // }
+    // else{
+    //   alert("failed to add Event")
+    // }
+  
+  
 
   //back button function
 back(){

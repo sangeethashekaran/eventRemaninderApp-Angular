@@ -43,8 +43,9 @@ h2{
     position:relative;
     top:50%;
     left:23%;
-    color:black;
-    font-weight:normal;
+    /* color:black; */
+    color:snow;
+    font-weight:600;
     font-size:40px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -7,14 +8,28 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./view-event.component.css']
 })
 export class ViewEventComponent implements OnInit {
-  results=""                   //event disply
-  constructor(private data:DataService) {
-    let uID=localStorage.getItem("currentUid")
-    this.results=this.data.displayEvent(uID);
+  userEvents=""                   //events
+  constructor(private data:DataService,private router:Router) {
+    let uid=localStorage.getItem("uid")
+    this.data.displayEvent(uid)
+    .subscribe((result:any)=>{
+      if(result){
+        this.userEvents=result.message
+      }
+    },
+    (result)=>{
+      alert(result.error.message)
+    }
+    )
    }
    
   
   ngOnInit(): void {
   }
-
+  homepage(){
+   this.router.navigateByUrl("dashboard")
+  }
+  logout(){
+    this.router.navigateByUrl("")
+  }
 }

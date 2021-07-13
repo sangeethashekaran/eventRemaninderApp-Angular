@@ -10,8 +10,10 @@ import { DataService } from '../services/data.service';
 })
 export class DashboardComponent implements OnInit {
 
-
-  constructor(private data:DataService,private router:Router) { }
+    username:any;
+  constructor(private data:DataService,private router:Router) {
+    this.username=localStorage.getItem("name")
+   }
 
   ngOnInit(): void {
   }

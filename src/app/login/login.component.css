@@ -27,6 +27,12 @@
     width:350px;
     background:thistle;
 }
+::placeholder {
+    color:steelblue;
+    word-spacing: 2px;
+    /* font-size: 2rem; */
+    /* text-transform: uppercase; */
+  }
 
 .btn-success{
     width: 300px;

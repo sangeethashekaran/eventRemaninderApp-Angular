@@ -23,16 +23,29 @@ export class LoginComponent implements OnInit {
     if(this.loginForm.valid) {
      let id=this.loginForm.value.id;
      let pswd=this.loginForm.value.pswd;
-     const result = this.data.login(id,pswd)
-     if(result){
-       alert("Login successfull");
-       this.route.navigateByUrl("dashboard");
-     }
-     else{
-       alert("Invalid account")
-     }
+     this.data.login(id,pswd)
+     .subscribe((result:any)=>{
+       if(result){
+         alert(result.message);
+         this.route.navigateByUrl("dashboard");
+         localStorage.setItem("uid",id) //saving current id 
+         localStorage.setItem("name",result.username)  //saving current username
+       }
+      },
+      (result)=>{
+        alert(result.error.message)
+      }
+     )
+    }
+  //    if(result){
+  //      alert("Login successfull");
+  //      this.route.navigateByUrl("dashboard");
+  //    }
+  //    else{
+  //      alert("Invalid account")
+  //    }
 
-  }
+  // }
 
 else{
 alert("Invalid Form")
